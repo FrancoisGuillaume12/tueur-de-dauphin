@@ -17,7 +17,9 @@ $db = new Crud();
 
 //print_r($db->getSpeciliterByName('css'))
 
-print_r($db->getAnnuaireBySpec('Astrid Breton','css'))
+//print_r($db->getAnnuaireBySpec('Astrid Breton','css'))
+
+$db->addNewAnnuaire('Alex Goncalves','igor', 'francois', 'Vosges')
 
 
 

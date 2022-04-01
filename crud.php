@@ -81,12 +81,12 @@ public function  __construct()
 //une method pour creer une fiche à partir d'un user 
         //moi en tant user je souhaite creer une nouvelle fiche dans mon annauire
 
-    public function getNewAnnuaire($iduser,$lastName,$firstName,$adress){
-
-    
+    public function addNewAnnuaire($name,$lastName,$firstName,$adress){
+        $user = $this->getUserByName($name);
+        
         $req =  "INSERT INTO `annuaire` (`IDuser`, `nom`, `prenom`, `adresse`) VALUES (:IDuser,:nom,:prenom, :adresse)";
-        $stat = $this->databas->prepare($req);
-        $stat->execute(['IDuser'=>$iduser,':nom' =>$lastName ,':prenom'=>$firstName, ':adresse'=>$adress]);
+        $stat = $this->database->prepare($req);
+        $stat->execute(['IDuser'=>$user['IDuser'],':nom' =>$lastName ,':prenom'=>$firstName, ':adresse'=>$adress]);
     }
 
 
