@@ -1,7 +1,5 @@
 <?php
 
-use LDAP\Result;
-
 class Crud {
 ///proprietes
 public $database;

@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `annuaire`
 --
 
+
 DROP TABLE IF EXISTS `annuaire`;
 CREATE TABLE IF NOT EXISTS `annuaire` (
   `IDannuaire` int(11) NOT NULL AUTO_INCREMENT,
